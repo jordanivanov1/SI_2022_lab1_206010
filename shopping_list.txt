@@ -2,4 +2,6 @@ Jajca x2
 Leb x1
 Mleko x4
 Sok x5
+Pivo x5
 Oriz x1
+Cips x3
