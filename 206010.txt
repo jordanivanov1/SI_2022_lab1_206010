@@ -1,0 +1,179 @@
+git clone https://github.com/jordanivanov1/SI_2022_lab1_206010.git
+-го клонирам 
+cd SI_2022_lab1_206010 --влегувам во него
+touch shopping_list.txt -- Правам текст дадотека 
+nano shopping_list.txt --додавам продукти
+git add . ---ја додавам на сцена
+$ git commit -m "Add 5 items to the shopping list" ---правам комит
+nano shopping_list.txt-- додавам количини
+git add .  ---ја додавам на сцена
+git commit -m "Add quantities to the items." - правам комит, сега немав проблем :D
+git branch branch1
+git branch branch2 --- креирам 2 нови бранча
+
+
+Jordan@DESKTOP-SARGCN3 MINGW64 ~/desktop/SI_2022_lab1_206010 (master)
+$ git log
+commit e9f50030608ef79b789020749e67420a27e6c2e6 (HEAD -> master, branch2, branch1)
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 16:45:30 2022 +0200
+
+    Add quantities to the items.
+
+commit 77c9a5a606b1f5a02ba370024f6e6efbfac98b30
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 16:21:25 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit e249758c62367181fbff390bda159e8aa9ef2ac9 (origin/master, origin/HEAD)
+Author: jordanivanov1 <86935092+jordanivanov1@users.noreply.github.com>
+Date:   Wed Apr 6 16:12:49 2022 +0200
+
+    Update README.md
+
+commit 82361b8635658dce5bafc5ff099c5dcaddbd194f
+Author: jordanivanov1 <86935092+jordanivanov1@users.noreply.github.com>
+Date:   Wed Apr 6 16:12:18 2022 +0200
+
+    Initial commit
+
+$ git push origin master
+$ git push origin branch1
+$ git push origin branch2
+- се синхронизирам со ремоте репо
+
+$ git checkout branch1
+Switched to branch 'branch1'
+
+
+nano shopping_list.txt - ја менувам 5тата ставка
+git add . -- ставам на сцена
+$ git commit -m "Change quantity of item #5"  -правам комит
+
+$ git checkout master
+Switched to branch 'master'
+
+nano shopping_list.txt - ја менувам 2рата ставка
+git add . -- ставам на сцена
+$ git commit -m "Change quantity of item #2"  -правам комит
+
+git push origin branch1
+git push origin master
+- се синхронизирам со ремоте репо
+
+
+$ git checkout branch2
+Switched to branch 'branch2'
+
+nano shopping_list.txt - ја менувам 4тата ставка
+git add . -- ставам на сцена
+$ git commit -m "Modify item #4"  -правам комит 
+
+Jordan@DESKTOP-SARGCN3 MINGW64 ~/desktop/SI_2022_lab1_206010 (branch2)
+$ git log
+commit 6a6178f9645d36f794b081bf4d5bc4463d054677 (HEAD -> branch2)
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 17:57:34 2022 +0200
+
+    Modify item #4
+
+commit c3aec85411dd4905199d58a78789ae78b4a43ac5 (origin/branch2)
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 17:46:34 2022 +0200
+
+    Add quantities to the items.
+
+commit 340682892dbd5fe02ea05caf106ddd2d79a868c2
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 17:42:53 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 9adc7ed4e208b1f51c2bc52ba0a38e3e2cbaebe4
+Author: jordanivanov1 <86935092+jordanivanov1@users.noreply.github.com>
+Date:   Wed Apr 6 17:34:24 2022 +0200
+
+    Update README.md
+
+commit 1397c7ccc73cbb7fa7d17bd2f8f14efc9cd658d5
+Author: jordanivanov1 <86935092+jordanivanov1@users.noreply.github.com>
+Date:   Wed Apr 6 17:33:47 2022 +0200
+
+    Initial commit
+
+
+
+(ova e logovi od branch2)
+
+nano shopping_list.txt-dodavam 6to
+git add . - dodavam na stage
+git commit --amend - gi spojuvam dvete i go menjam imeto
+
+
+
+
+
+Jordan@DESKTOP-SARGCN3 MINGW64 ~/desktop/SI_2022_lab1_206010 (branch2)
+$ git log
+commit 960ff0a4d25d2fed20f6f4bf3ac7730135d238dc (HEAD -> branch2)
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 17:57:34 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit c3aec85411dd4905199d58a78789ae78b4a43ac5 (origin/branch2)
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 17:46:34 2022 +0200
+
+    Add quantities to the items.
+
+commit 340682892dbd5fe02ea05caf106ddd2d79a868c2
+Author: Jordan Ivanov <jordanivanov2001@yahoo.com>
+Date:   Wed Apr 6 17:42:53 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 9adc7ed4e208b1f51c2bc52ba0a38e3e2cbaebe4
+Author: jordanivanov1 <86935092+jordanivanov1@users.noreply.github.com>
+Date:   Wed Apr 6 17:34:24 2022 +0200
+
+    Update README.md
+
+commit 1397c7ccc73cbb7fa7d17bd2f8f14efc9cd658d5
+Author: jordanivanov1 <86935092+jordanivanov1@users.noreply.github.com>
+Date:   Wed Apr 6 17:33:47 2022 +0200
+
+    Initial commit
+
+
+
+git checkout master
+Switched to branch 'master'
+
+git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+-gi spojuvam branch 1 i master, nemase nikakvi problemi recursive merge
+
+
+git merge branch2
+ne uspea po sto ja smeniv sodrzinata so 
+nano shopping_list.txt
+git add . - staviv na stage
+ git commit -m "merge completed"
+
+-i sega uspeav so recurzive merge da gi spojam :D 
+
+sega ke go dodadam ovaj dokumet u pakata
+i posle ke sinhroniziram
+
+
+
+
+
+
+
+
